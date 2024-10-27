@@ -13,7 +13,7 @@ def get_db_connection():
         host='flashdb.c7g4csqm6jl5.us-east-1.rds.amazonaws.com',  
         user='admin',
         password='Flaskdb69',
-        database='flaskdb'
+        database='flashdb'
     )
 
 # Home Route
