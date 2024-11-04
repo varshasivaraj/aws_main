@@ -8,10 +8,10 @@ app.secret_key = 'temporary_key'
 
 def get_db_connection():
     return mysql.connector.connect(
-        host='fclonedb.ct08cmkomfco.us-east-1.rds.amazonaws.com',
+        host='clonedb1.ct08cmkomfco.us-east-1.rds.amazonaws.com',
         user='admin',
         password='Psad-1357',
-        database='clonedb'
+        database='clone_db1'
     )
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -56,8 +56,8 @@ def login():
 @app.route('/dashboard')
 def dashboard():
     course_urls = [
-        'https://clonebuck1.s3.us-east-1.amazonaws.com/DC+-+UNIT+1+-+INTRODUCTION.pdf',
-        'https://clonebuck1.s3.us-east-1.amazonaws.com/Foundations+of+UI+design.pdf'
+        'https://clonebuck.s3.us-east-1.amazonaws.com/STA+unit-V-notes+(3).pdf',
+        'https://clonebuck.s3.us-east-1.amazonaws.com/SOFTWARE+TESTING+BY+RON+PATTON.pdf'
     ]
     
     return render_template('dashboard.html', course_urls=course_urls)
@@ -82,6 +82,6 @@ def logout():
 
 
 
-if _name_ == '__main__':
+if _name_ == '_main_':
 
     app.run(host="0.0.0.0", port=5000,debug=True)
